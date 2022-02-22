@@ -16,4 +16,5 @@ Observações do cenário III
   - Fazer uso de restrições cut-sets, que possuem algoritmos de separação eficientes, como por exemplo o algoritmo de Edmons-Karp para o problema de fluxo máximo. Isso provavelmente reduziria o tempo de processamento do solver.
 
 
+* Não foi possível carregar o arquivo 'states_gmaps.json' ou 'states_line.json', ValueError: All arrays must be of the same length.
 
