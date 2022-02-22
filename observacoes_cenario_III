@@ -1,0 +1,19 @@
+Observações do cenário III
+
+* Foi utilizada uma formulação que faz uso de restrições SEC (subtour elimination constraints) para a eliminação de sub-rotas na solução, em vez de restrições baseadas em fluxo ou multifluxo 
+    - essa escolha se deu pelo motivo desse tipo de restrição apresentar uma performance geralmente superior às demais na literatura, pois são desconsideradas incialmente e adicionadas “sob demanda”
+    - Apenas as SECs violadas são adicionadas no modelo, que é resolvido novamente a cada vez que isso ocorre
+
+* O solver utilizado para a enumeração da árvore de branch-and-bound e resolução foi o Gurobi
+    - obteve-se a solução de custo 125.37
+    - o tempo de processamento foi de 0.02 segundos
+
+* Para a construção do grafo de entrada, foram consideradas distancias euclidianas dos pontos presentes no arquivo states_coords.csv
+
+* Caso houvesse mais tempo, poderiam ser realizadas as seguintes melhorias na implementação:
+
+  - Uma melhor apresentação da solução obtida, apresentando graficamente a rota no mapa juntamente com o nome das capitais
+  - Fazer uso de restrições cut-sets, que possuem algoritmos de separação eficientes, como por exemplo o algoritmo de Edmons-Karp para o problema de fluxo máximo. Isso provavelmente reduziria o tempo de processamento do solver.
+
+
+
